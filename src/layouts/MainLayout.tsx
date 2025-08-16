@@ -8,7 +8,7 @@ const MainLayout = () => {
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
       <Header />
-      <main className="flex-grow mt-10">
+      <main className="flex-grow mt-12 md:mt-16">
         <Outlet />
       </main>
       <Footer />

@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import MTech from './pages/MTech';
 import Marketing from './pages/Marketing';
 import Studio from './pages/Studio';
+import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -24,6 +25,7 @@ function App() {
           <Route path="m-tech" element={<MTech />} />
           <Route path="marketing" element={<Marketing />} />
           <Route path="studio" element={<Studio />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
