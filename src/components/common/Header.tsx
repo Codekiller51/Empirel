@@ -1,0 +1,126 @@
+import { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import Logo from './Logo';
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'M-Tech', path: '/m-tech' },
+    { name: 'Marketing', path: '/marketing' },
+    { name: 'Studio', path: '/studio' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary-dark shadow-lg">
+      <div className="hidden md:block bg-primary-dark/80 py-2 border-b border-primary-gold/20">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-6 text-white/80 text-sm">
+              <a href="tel:+255767719743" className="flex items-center hover:text-primary-gold transition-colors">
+                <Phone size={16} className="mr-2" />
+                +255 767 719 743
+              </a>
+              <a href="mailto:m-tech@empirel.co.tz" className="flex items-center hover:text-primary-gold transition-colors">
+                <Mail size={16} className="mr-2" />
+                m-tech@empirel.co.tz
+              </a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary-gold transition-colors">
+                <Facebook size={18} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary-gold transition-colors">
+                <Twitter size={18} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary-gold transition-colors">
+                <Instagram size={18} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary-gold transition-colors">
+                <Linkedin size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <Link to="/" className="z-50">
+            <Logo />
+            
+          </Link>
+
+          <nav className="hidden md:block">
+            <ul className="flex space-x-8">
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `text-white hover:text-primary-gold transition-colors font-medium text-sm uppercase tracking-wider relative ${
+                        isActive ? 'text-primary-gold' : ''
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <button
+            className="z-50 md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-primary-dark flex flex-col justify-center items-center z-40 md:hidden"
+          >
+            <nav>
+              <ul className="flex flex-col space-y-8 items-center">
+                {navLinks.map((link) => (
+                  <li key={link.path}>
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `text-white hover:text-primary-gold transition-colors font-medium text-xl ${
+                          isActive ? 'text-primary-gold' : ''
+                        }`
+                      }
+                    >
+                      {link.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
+
+export default Header;
