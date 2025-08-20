@@ -72,7 +72,7 @@ const Button: React.FC<ButtonProps> = ({
   // Render based on whether it's a link or button
   if (href) {
     return (
-      <a href={href} className={classes} {...props}>
+      <a href={href} className={classes} {...(props as any)}>
         {children}
       </a>
     );
@@ -80,14 +80,14 @@ const Button: React.FC<ButtonProps> = ({
   
   if (to) {
     return (
-      <Link to={to} className={classes}>
+      <Link to={to} className={classes} aria-label={typeof children === 'string' ? children : undefined}>
         {children}
       </Link>
     );
   }
   
   return (
-    <button className={classes} {...props}>
+    <button className={classes} {...props} aria-label={props['aria-label'] || (typeof children === 'string' ? children : undefined)}>
       {children}
     </button>
   );

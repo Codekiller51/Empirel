@@ -9,10 +9,11 @@ const categories = ['All', 'Branding', 'Web Design', 'Photography', 'Video'];
 const projects = [
   {
     id: 1,
-    title: 'Luxury Brand Identity',
+    title: 'Serengeti Brewing Company Brand Identity',
     category: 'Branding',
     image: '/product-1.jpeg',
-    height: 'medium',
+    height: 'tall',
+    description: 'Complete brand identity design for Tanzania\'s premium craft brewery. Created logo, packaging design, marketing materials, and brand guidelines. The brand successfully launched in 5 major cities and achieved 15% market share in the premium beer segment within 18 months.',
   },
   // {
   //   id: 2,
@@ -23,24 +24,27 @@ const projects = [
   // },
   {
     id: 3,
-    title: 'Product Photography',
+    title: 'Tanzanian Coffee Export Campaign',
     category: 'Photography',
     image: '/product-2.jpeg',
     height: 'medium',
+    description: 'Professional product photography and marketing campaign for Kilimanjaro Coffee Cooperative. Shot on location in Moshi, featuring local farmers and the coffee production process. Images used across international marketing materials, resulting in 40% increase in export orders.',
   },
   {
     id: 4,
-    title: 'Corporate Brand Video',
+    title: 'Bank of Tanzania Corporate Documentary',
     category: 'Video',
     image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     height: 'medium',
+    description: '15-minute corporate documentary showcasing BoT\'s role in Tanzania\'s economic development. Featured interviews with key officials, economic data visualization, and historical footage. Used for investor relations and public education campaigns.',
   },
   {
     id: 5,
-    title: 'Restaurant Brand Identity',
+    title: 'Zanzibar Spice Company Packaging Design',
     category: 'Branding',
     image: 'https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     height: 'tall',
+    description: 'Packaging design and brand identity for premium spice exporter. Created designs that reflect Zanzibar\'s rich spice heritage while meeting international packaging standards. Products now sold in 12 countries with 300% increase in brand recognition.',
   },
   // {
   //   id: 6,
@@ -51,17 +55,19 @@ const projects = [
   // },
   {
     id: 7,
-    title: 'Fashion Lookbook',
+    title: 'Dar Fashion Week 2023 Photography',
     category: 'Photography',
     image: '/fashion-1.jpeg',
     height: 'medium',
+    description: 'Official photography for Dar es Salaam Fashion Week, capturing 50+ designers and 200+ models over 4 days. Images featured in Vogue Africa, Elle, and local fashion publications. Our work helped establish DSFW as East Africa\'s premier fashion event.',
   },
   {
     id: 8,
-    title: 'PhotoShoot',
+    title: 'Tanzania Tourism Board Campaign',
     category: 'Photography',
     image: '/shoot-1.jpeg',
     height: 'short',
+    description: 'Large-scale photography project documenting Tanzania\'s tourist attractions for the national tourism campaign. Shot across 15 regions including Serengeti, Ngorongoro, and Zanzibar. Images used in international marketing campaigns that contributed to 25% increase in tourist arrivals.',
   },
 ];
 

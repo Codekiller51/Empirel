@@ -17,7 +17,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   accentColor = 'bg-primary-gold',
 }) => {
   const textColorClass = color === 'light' ? 'text-white' : 'text-primary-dark';
-  const subtitleColorClass = color === 'light' ? 'text-neutral-300' : 'text-neutral-600';
+  const subtitleColorClass = color === 'light' ? 'text-neutral-300' : 'text-neutral-600 dark:text-neutral-400';
   const alignment = center ? 'text-center mx-auto' : '';
   
   const titleVariants = {
@@ -60,7 +60,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   return (
     <div className={`mb-12 ${alignment}`}>
       <motion.h2 
-        className={`text-3xl md:text-4xl font-bold ${textColorClass}`}
+        className={`text-3xl md:text-4xl font-bold ${textColorClass} dark:text-white`}
         variants={titleVariants}
         initial="hidden"
         whileInView="visible"

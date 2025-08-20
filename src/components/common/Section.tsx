@@ -55,7 +55,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`${bgColor} ${paddingClasses[paddingY]} ${heightClass} ${className}`}
+      className={`${bgColor} dark:bg-neutral-900 ${paddingClasses[paddingY]} ${heightClass} ${className}`}
     >
       <motion.div 
         className={`container mx-auto px-4 ${maxWidth !== 'none' ? maxWidthClasses[maxWidth] : ''}`}

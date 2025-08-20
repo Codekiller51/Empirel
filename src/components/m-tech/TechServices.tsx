@@ -7,32 +7,32 @@ import Card from '../common/Card';
 const services = [
   {
     title: 'Custom Software Development',
-    description: 'Tailored software solutions designed to address your specific business challenges and optimize operations.',
+    description: 'Tailored software solutions designed for East African businesses. We build applications that work reliably with local infrastructure, integrate with mobile money systems, and address unique regional business challenges.',
     icon: <Cpu size={48} className="text-mtech-accent" />,
   },
   {
     title: 'Cloud Infrastructure',
-    description: 'Scalable, secure, and optimized cloud solutions to enhance performance and reduce operational costs.',
+    description: 'Scalable cloud solutions optimized for African connectivity. We design infrastructure that performs well with varying internet speeds and provides reliable service across Tanzania and the region.',
     icon: <Server size={48} className="text-mtech-accent" />,
   },
   {
     title: 'Data Management',
-    description: 'Comprehensive data strategies, from architecture design to analytics and business intelligence.',
+    description: 'Comprehensive data strategies that help Tanzanian businesses make informed decisions. From customer analytics to business intelligence, we turn your data into actionable insights for growth.',
     icon: <Database size={48} className="text-mtech-accent" />,
   },
   {
     title: 'Cybersecurity',
-    description: 'Advanced security solutions to protect your digital assets from threats and ensure compliance.',
+    description: 'Advanced security solutions tailored for East African businesses. We protect your digital assets from regional and global threats while ensuring compliance with local and international regulations.',
     icon: <Shield size={48} className="text-mtech-accent" />,
   },
   {
     title: 'Web & Mobile Development',
-    description: 'Responsive, high-performance web and mobile applications for seamless user experiences.',
+    description: 'Responsive web and mobile applications optimized for African users. We build fast-loading, data-efficient apps that work well on various devices and network conditions common in Tanzania.',
     icon: <Globe size={48} className="text-mtech-accent" />,
   },
   {
     title: 'Business Intelligence',
-    description: 'Data-driven insights and visualization tools to inform strategic decision-making and growth.',
+    description: 'Business intelligence solutions that understand East African market dynamics. We create dashboards and analytics tools that help you track performance and identify growth opportunities in your market.',
     icon: <BarChart size={48} className="text-mtech-accent" />,
   },
 ];

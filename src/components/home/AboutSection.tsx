@@ -10,7 +10,7 @@ const AboutSection = () => {
         <div>
           <SectionTitle
             title="Who We Are"
-            subtitle="EmpireL is a premium digital agency dedicated to helping businesses build their digital legacy through innovative solutions."
+            subtitle="EmpireL is Tanzania's leading digital agency, dedicated to helping businesses across East Africa and beyond build their digital legacy through innovative, culturally-aware solutions."
           />
           
           <motion.div
@@ -19,18 +19,18 @@ const AboutSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-neutral-700 mb-6">
-              Founded in 2020, we've rapidly established ourselves as industry leaders through our commitment to excellence and our unique three-division approach that allows us to provide comprehensive solutions tailored to your specific needs.
+            <p className="text-neutral-700 dark:text-neutral-300 mb-6">
+              Founded in 2020 in Dar es Salaam, we've rapidly established ourselves as East Africa's premier digital agency. Our unique three-division approach—M-Tech, Marketing, and Studio—allows us to provide comprehensive solutions that bridge the gap between global digital standards and local market understanding.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="bg-white p-4 rounded shadow-soft">
-                <div className="text-3xl font-bold text-primary-gold mb-2">100+</div>
+                <div className="text-3xl font-bold text-primary-gold mb-2">150+</div>
                 <div className="text-sm text-neutral-700">Projects Completed</div>
               </div>
               
               <div className="bg-white p-4 rounded shadow-soft">
-                <div className="text-3xl font-bold text-primary-gold mb-2">50+</div>
+                <div className="text-3xl font-bold text-primary-gold mb-2">80+</div>
                 <div className="text-sm text-neutral-700">Happy Clients</div>
               </div>
               
@@ -40,8 +40,8 @@ const AboutSection = () => {
               </div>
               
               <div className="bg-white p-4 rounded shadow-soft">
-                <div className="text-3xl font-bold text-primary-gold mb-2">15+</div>
-                <div className="text-sm text-neutral-700">Industry Awards</div>
+                <div className="text-3xl font-bold text-primary-gold mb-2">12</div>
+                <div className="text-sm text-neutral-700">Countries Served</div>
               </div>
             </div>
             

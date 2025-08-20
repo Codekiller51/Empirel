@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Code, PaintBucket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
 
 const slides = [
   {
     id: 1,
-    title: "EmpireL",
-    subtitle: "Building Digital Legacies",
-    description: "We craft exceptional digital experiences through technology, marketing, and creative solutions that transform businesses and build lasting legacies.",
+    titleKey: "hero.title",
+    subtitleKey: "hero.subtitle", 
+    descriptionKey: "hero.description",
     bgGradient: "from-primary-dark via-primary-dark to-black",
     accentColor: "text-primary-gold",
     buttonColor: "default",
@@ -16,9 +17,9 @@ const slides = [
   },
   {
     id: 2,
-    title: "Tech Solutions",
-    subtitle: "Transform Your Digital Future",
-    description: "Leverage cutting-edge technology solutions to optimize operations, enhance efficiency, and drive sustainable growth for your business.",
+    titleKey: "nav.mtech",
+    subtitleKey: "mtech.title",
+    descriptionKey: "mtech.description",
     bgGradient: "from-mtech-light via-white to-mtech-light",
     accentColor: "text-mtech-accent",
     buttonColor: "mtech",
@@ -26,9 +27,9 @@ const slides = [
   },
   {
     id: 3,
-    title: "Marketing Excellence",
-    subtitle: "Amplify Your Market Impact",
-    description: "Strategic marketing solutions that drive measurable results, enhance brand visibility, and accelerate business growth.",
+    titleKey: "nav.marketing",
+    subtitleKey: "marketing.title",
+    descriptionKey: "marketing.description",
     bgGradient: "from-marketing-light via-white to-marketing-light",
     accentColor: "text-marketing-accent",
     buttonColor: "marketing",
@@ -36,9 +37,9 @@ const slides = [
   },
   {
     id: 4,
-    title: "Creative Studio",
-    subtitle: "Bring Ideas To Life",
-    description: "Transform your vision into captivating visual experiences through innovative design, photography, and video production.",
+    titleKey: "nav.studio",
+    subtitleKey: "studio.title",
+    descriptionKey: "studio.description",
     bgGradient: "from-studio-light via-white to-studio-light",
     accentColor: "text-studio-accent",
     buttonColor: "studio",
@@ -49,6 +50,7 @@ const slides = [
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!isHovered) {
@@ -67,7 +69,7 @@ const Hero = () => {
 
   return (
     <div 
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden dark:bg-black"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -118,13 +120,13 @@ const Hero = () => {
             className="max-w-4xl"
           >
             {slides[currentSlide].icon}
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold ${currentSlide === 0 ? 'text-white' : 'text-primary-dark'} mb-6`}>
-              <span className="block">{slides[currentSlide].title}</span>
-              <span className={slides[currentSlide].accentColor}>{slides[currentSlide].subtitle}</span>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold ${currentSlide === 0 ? 'text-white dark:text-neutral-100' : 'text-primary-dark dark:text-white'} mb-6`}>
+              <span className="block">{t(slides[currentSlide].titleKey)}</span>
+              <span className={slides[currentSlide].accentColor}>{t(slides[currentSlide].subtitleKey)}</span>
             </h1>
 
-            <p className={`text-xl ${currentSlide === 0 ? 'text-neutral-200' : 'text-neutral-700'} mb-8 max-w-xl`}>
-              {slides[currentSlide].description}
+            <p className={`text-xl ${currentSlide === 0 ? 'text-neutral-200 dark:text-neutral-300' : 'text-neutral-700 dark:text-neutral-300'} mb-8 max-w-xl`}>
+              {t(slides[currentSlide].descriptionKey)}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -133,11 +135,11 @@ const Hero = () => {
                 colorScheme={slides[currentSlide].buttonColor}
                 to={currentSlide === 0 ? "/contact" : `/${currentSlide === 1 ? 'm-tech' : currentSlide === 2 ? 'marketing' : 'studio'}`}
               >
-                {currentSlide === 0 ? "Get Started" : "Learn More"}
+                {currentSlide === 0 ? t('hero.getStarted') : "Learn More"}
               </Button>
               {currentSlide === 0 && (
                 <Button size="lg" variant="outline" to="/m-tech">
-                  Explore Services
+                  {t('hero.exploreServices')}
                 </Button>
               )}
             </div>
@@ -163,7 +165,7 @@ const Hero = () => {
         {/* Navigation arrows */}
         <button
           onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-300"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 text-white"
           aria-label="Previous slide"
         >
           <motion.div
@@ -175,7 +177,7 @@ const Hero = () => {
         </button>
         <button
           onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-300"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 dark:bg-black/20 dark:hover:bg-black/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 text-white"
           aria-label="Next slide"
         >
           <motion.div

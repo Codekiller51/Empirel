@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { Code, Server, Database, Cpu } from 'lucide-react';
+import { Code, Server, Database, Cpu, Users, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
 
 const TechHero = () => {
+  const { t } = useTranslation();
+  
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
+    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 dark:from-black dark:via-neutral-900 dark:to-slate-900 overflow-hidden">
       {/* Animated circuit board pattern */}
       <div className="absolute inset-0 opacity-20">
         {[...Array(20)].map((_, i) => (
@@ -67,25 +70,43 @@ const TechHero = () => {
               transition={{ delay: 0.3 }}
             >
               <Code size={20} className="mr-2" />
-              <span className="font-semibold tracking-wide text-sm md:text-base">Innovative Tech Solutions</span>
+              <span className="font-semibold tracking-wide text-sm md:text-base">{t('mtech.badge', 'Innovative Tech Solutions')}</span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 md:mb-8 leading-[1.1]">
-              Transform Your
-              <span className="block text-cyan-400 mt-2 md:mt-4 drop-shadow-sm">Digital Future</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white dark:text-neutral-100 mb-6 md:mb-8 leading-[1.1]">
+              {t('mtech.title')}
+              <span className="block text-cyan-400 mt-2 md:mt-4 drop-shadow-sm">{t('mtech.subtitle', 'Digital Future')}</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-300 mb-8 md:mb-10 max-w-lg leading-relaxed">
-              Leverage cutting-edge technology solutions to optimize operations, enhance efficiency, and drive sustainable growth for your business.
+            <p className="text-lg md:text-xl text-slate-300 dark:text-neutral-300 mb-8 md:mb-10 max-w-lg leading-relaxed">
+              {t('mtech.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" colorScheme="mtech" to="/contact">
-                Start Your Journey
+                {t('mtech.startJourney')}
               </Button>
               <Button size="lg" variant="outline" colorScheme="mtech" href="#services" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400/10">
-                Explore Solutions
+                {t('mtech.exploreSolutions')}
               </Button>
+            </div>
+            
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 gap-6 mt-12 max-w-md">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Users className="text-cyan-400 mr-2" size={20} />
+                  <span className="text-2xl font-bold text-white">50+</span>
+                </div>
+                <p className="text-sm text-slate-300">Projects Delivered</p>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Award className="text-cyan-400 mr-2" size={20} />
+                  <span className="text-2xl font-bold text-white">5+</span>
+                </div>
+                <p className="text-sm text-slate-300">Years Experience</p>
+              </div>
             </div>
           </motion.div>
 
@@ -100,34 +121,34 @@ const TechHero = () => {
                 {
                   icon: <Cpu size={32} />,
                   title: 'Custom Development',
-                  desc: 'Tailored software solutions',
+                  desc: 'Tailored for Tanzania businesses',
                 },
                 {
                   icon: <Server size={32} />,
                   title: 'Cloud Solutions',
-                  desc: 'Scalable infrastructure',
+                  desc: 'Reliable & scalable systems',
                 },
                 {
                   icon: <Database size={32} />,
                   title: 'Data Systems',
-                  desc: 'Intelligent analytics',
+                  desc: 'Smart business insights',
                 },
                 {
                   icon: <Code size={32} />,
                   title: 'API Integration',
-                  desc: 'Seamless connectivity',
+                  desc: 'Connect your systems',
                 },
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 shadow-soft hover:shadow-hover hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 dark:bg-black/20 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 shadow-soft hover:shadow-hover hover:bg-white/20 dark:hover:bg-black/40 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
                 >
                   <div className="text-cyan-400 mb-3 md:mb-4">{item.icon}</div>
-                  <h3 className="font-bold text-white mb-2 tracking-wide text-sm md:text-base">{item.title}</h3>
-                  <p className="text-xs md:text-sm text-slate-300">{item.desc}</p>
+                  <h3 className="font-bold text-white dark:text-neutral-100 mb-2 tracking-wide text-sm md:text-base">{item.title}</h3>
+                  <p className="text-xs md:text-sm text-slate-300 dark:text-neutral-400">{item.desc}</p>
                 </motion.div>
               ))}
             </div>

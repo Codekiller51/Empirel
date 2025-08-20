@@ -6,24 +6,24 @@ import Card from '../common/Card';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    company: 'TechStart Inc.',
+    name: 'Dr. Amina Hassan',
+    company: 'Kilimanjaro Medical Centre',
     image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    quote: 'EmpireL transformed our digital presence completely. Their M-Tech division built us a scalable platform that\'s been crucial to our growth.',
+    quote: 'EmpireL developed our patient management system that now serves over 500 patients daily. Their understanding of the Tanzanian healthcare landscape and technical expertise made them the perfect partner for our digital transformation.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    company: 'Innovative Solutions',
+    name: 'James Mwalimu',
+    company: 'Serengeti Safaris Ltd',
     image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    quote: 'The marketing team at EmpireL doubled our conversion rate in just three months. Their data-driven approach delivered real results.',
+    quote: 'Working with EmpireL\'s marketing team increased our direct bookings by 280% in just six months. They understand both the local market and international tourism trends, which was exactly what we needed.',
     rating: 5,
   },
   {
-    name: 'Emma Davis',
-    company: 'Creative Concepts',
+    name: 'Grace Mbwana',
+    company: 'Kanga Couture',
     image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    quote: 'Working with EmpireL\'s Studio division was a game-changer for our brand. Their creative vision and execution were beyond our expectations.',
+    quote: 'EmpireL\'s creative team helped us modernize our traditional fashion brand while respecting our cultural heritage. Their photography and branding work opened doors to international markets we never thought possible.',
     rating: 5,
   },
 ];

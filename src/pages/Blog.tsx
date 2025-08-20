@@ -9,8 +9,8 @@ import Button from '../components/common/Button';
 const blogPosts = [
   {
     id: 1,
-    title: 'The Future of Web Development: Trends to Watch in 2025',
-    excerpt: 'Explore the latest trends shaping web development, from AI integration to progressive web apps and beyond.',
+    title: 'Digital Transformation in Tanzania: Opportunities and Challenges for Local Businesses',
+    excerpt: 'An in-depth analysis of how Tanzanian businesses can leverage digital technologies to compete globally while addressing local market challenges.',
     author: 'EmpireL Tech Team',
     date: '2024-12-15',
     category: 'Technology',
@@ -19,8 +19,8 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: 'Digital Marketing Strategies That Actually Work in 2025',
-    excerpt: 'Discover proven digital marketing tactics that drive real results and ROI for businesses of all sizes.',
+    title: 'Mobile-First Marketing: Reaching Tanzania\'s Growing Smartphone Market',
+    excerpt: 'How to create effective mobile marketing campaigns that resonate with Tanzanian consumers and drive engagement across social platforms.',
     author: 'EmpireL Marketing Team',
     date: '2024-12-12',
     category: 'Marketing',
@@ -29,8 +29,8 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: 'Behind the Lens: Creating Compelling Visual Content',
-    excerpt: 'Learn the secrets of professional photography and videography that captivate audiences and tell powerful stories.',
+    title: 'Visual Storytelling for African Brands: Authentic Content That Connects',
+    excerpt: 'Discover how to create compelling visual content that celebrates African culture while appealing to both local and international audiences.',
     author: 'EmpireL Studio Team',
     date: '2024-12-10',
     category: 'Creative',
@@ -39,8 +39,8 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: 'Cloud Migration: A Complete Guide for Businesses',
-    excerpt: 'Everything you need to know about migrating your business to the cloud, from planning to execution.',
+    title: 'Building Scalable Web Applications for East African Markets',
+    excerpt: 'Technical insights on developing web applications that can handle the unique challenges of East African internet infrastructure and user behavior.',
     author: 'EmpireL Tech Team',
     date: '2024-12-08',
     category: 'Technology',
@@ -49,8 +49,8 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: 'Building Brand Identity Through Visual Storytelling',
-    excerpt: 'How to create a cohesive brand identity that resonates with your audience through powerful visual narratives.',
+    title: 'From Concept to Campaign: Our Creative Process for Tanzanian Brands',
+    excerpt: 'Take a behind-the-scenes look at how we develop creative campaigns that honor local culture while driving business results.',
     author: 'EmpireL Studio Team',
     date: '2024-12-05',
     category: 'Creative',
@@ -59,8 +59,8 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: 'SEO in 2025: What You Need to Know',
-    excerpt: 'Stay ahead of the curve with the latest SEO strategies and algorithm updates that will impact your rankings.',
+    title: 'Local SEO for Tanzanian Businesses: Dominating Google in Your City',
+    excerpt: 'Practical strategies for improving your local search rankings and attracting more customers in Dar es Salaam, Arusha, Mwanza, and beyond.',
     author: 'EmpireL Marketing Team',
     date: '2024-12-03',
     category: 'Marketing',

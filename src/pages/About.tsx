@@ -8,43 +8,43 @@ const teamMembers = [
       name: 'Albert A. Ngapemba',
       role: 'Founder & Managing Director',
       image: '/Team/ALBERT_A_NGAPEMBA.jpeg',
-      bio: 'Leading our company\'s vision and strategic direction with innovative marketing solutions.',
+      bio: 'Visionary leader with 8+ years in digital marketing and business development. Albert founded EmpireL with a mission to transform how Tanzanian businesses engage with digital technology and marketing.',
     },
     {
       name: 'Godwin S. Baltazary',
       role: 'Creative Lead',
       image: '/Team/GODWIN_S_BALTAZARY.jpeg',
-      bio: 'Bringing creative excellence and innovative design solutions to every project.',
+      bio: 'Award-winning creative director specializing in brand identity and visual storytelling. Godwin has led creative campaigns for over 100 brands across East Africa.',
     },
     {
       name: 'Veronica A. Mkela',
       role: 'Accounts & Finance',
       image: '/Team/VERONICA_A_MKELA.jpeg',
-      bio: 'Managing our financial operations and ensuring sustainable growth.',
+      bio: 'CPA with expertise in financial planning and business operations. Veronica ensures our projects are delivered on time and within budget while maintaining profitability.',
     },
     {
       name: 'Ebenezer E. Mashambo',
       role: 'H.O.D Outreach & Research',
       image: '/Team/EBENEZER_E_MASHAMBO.jpeg',
-      bio: 'Leading our research initiatives and expanding our market presence.',
+      bio: 'Market research specialist and business development expert. Ebenezer identifies new opportunities and ensures our services meet evolving market demands.',
     },
     {
       name: 'Jackline M. John',
       role: 'H.O.D Public Relations',
       image: '/Team/JACKLINE_M_JOHN.jpeg',
-      bio: 'Managing our public relations and building strong media relationships.',
+      bio: 'Communications expert with a background in journalism and public relations. Jackline manages our brand reputation and media relationships across Tanzania.',
     },
     {
       name: 'Hadson D. Rajab',
       role: 'Head IT Department',
       image: '/Team/Rajab__.jpeg',
-      bio: 'Leads our IT team and oversees all digital operations.',
+      bio: 'Senior software engineer with expertise in full-stack development and cloud architecture. Hadson leads our technical team in delivering cutting-edge solutions.',
     },
     {
       name: 'Anderson M. Malando',
       role: 'Vice IT Department',
       image: '/Team/Anderson.png',
-      bio: 'Supports IT operations and manages digital outreach.',
+      bio: 'Full-stack developer and digital marketing specialist. Anderson bridges the gap between technical implementation and marketing strategy.',
     },  
 ];
 
@@ -115,19 +115,19 @@ const About = () => {
           <div>
             <SectionTitle
               title="Our Mission"
-              subtitle="To empower businesses with innovative digital solutions that drive growth and create lasting impact."
+              subtitle="To empower Tanzanian and international businesses with innovative digital solutions that drive sustainable growth and create lasting impact in the digital economy."
             />
-            <p className="text-neutral-700">
-              We combine technology, marketing expertise, and creative excellence to help businesses thrive in the digital age. Our integrated approach ensures comprehensive solutions that address all aspects of digital presence.
+            <p className="text-neutral-700 dark:text-neutral-300">
+              Since 2020, EmpireL has been at the forefront of Tanzania's digital transformation. We combine cutting-edge technology, data-driven marketing strategies, and creative excellence to help businesses of all sizes establish a powerful digital presence. Our integrated approach ensures that every aspect of your digital journey is carefully planned and expertly executed.
             </p>
           </div>
           <div>
             <SectionTitle
               title="Our Vision"
-              subtitle="To be the leading force in digital transformation, setting new standards for excellence and innovation."
+              subtitle="To be East Africa's premier digital agency, recognized for transforming businesses through innovative technology and creative solutions."
             />
-            <p className="text-neutral-700">
-              We envision a future where every business, regardless of size, has access to enterprise-level digital solutions that drive growth and success in an increasingly connected world.
+            <p className="text-neutral-700 dark:text-neutral-300">
+              We envision a future where every Tanzanian business, from local startups to established enterprises, has access to world-class digital solutions. Our goal is to bridge the digital divide and position Tanzania as a leader in the African digital economy while serving clients globally.
             </p>
           </div>
         </div>
@@ -197,9 +197,9 @@ const About = () => {
       <Section bgColor="bg-primary-dark" paddingY="lg">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: '100+', label: 'Clients Served' },
-            { number: '250+', label: 'Projects Completed' },
-            { number: '15+', label: 'Industry Awards' },
+            { number: '80+', label: 'Clients Served' },
+            { number: '150+', label: 'Projects Completed' },
+            { number: '12', label: 'Countries Reached' },
             { number: '98%', label: 'Client Satisfaction' },
           ].map((stat, index) => (
             <motion.div

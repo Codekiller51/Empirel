@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <motion.div
-      className={`bg-white rounded-lg shadow-soft overflow-hidden ${hoverClasses} ${className}`}
+      className={`bg-white dark:bg-neutral-800 rounded-lg shadow-soft overflow-hidden ${hoverClasses} ${className}`}
       onClick={onClick}
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 20 }}

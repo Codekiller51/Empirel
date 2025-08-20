@@ -7,32 +7,32 @@ import Card from '../common/Card';
 const services = [
   {
     title: 'Search Engine Optimization',
-    description: 'Comprehensive SEO strategies to improve visibility, rankings, and organic traffic to your website.',
+    description: 'Comprehensive SEO strategies tailored for Tanzanian and East African markets. We improve your visibility on Google, increase organic traffic, and help you rank for keywords that matter to your local and international customers.',
     icon: <Search size={48} className="text-marketing-accent" />,
   },
   {
     title: 'Email Marketing',
-    description: 'Targeted email campaigns that nurture leads, engage customers, and drive conversions.',
+    description: 'Targeted email campaigns that respect cultural preferences and communication styles. We create engaging content that nurtures leads, builds customer loyalty, and drives conversions across diverse audiences.',
     icon: <AtSign size={48} className="text-marketing-accent" />,
   },
   {
     title: 'Brand Strategy',
-    description: 'Distinctive brand positioning and messaging to elevate your market presence and build loyalty.',
+    description: 'Distinctive brand positioning that honors local culture while appealing to global markets. We help you build a brand that resonates with Tanzanian values and stands out internationally.',
     icon: <Award size={48} className="text-marketing-accent" />,
   },
   {
     title: 'Performance Marketing',
-    description: 'Data-driven paid campaigns across multiple channels to maximize ROI and acquisition.',
+    description: 'Data-driven paid campaigns optimized for East African markets. We leverage Facebook, Google, and local platforms to maximize ROI while understanding regional spending patterns and preferences.',
     icon: <BarChart2 size={48} className="text-marketing-accent" />,
   },
   {
     title: 'Social Media Management',
-    description: 'Strategic content creation and community engagement to build your brand across social platforms.',
+    description: 'Strategic social media management that understands Tanzanian social culture. We create authentic content, engage communities, and build your brand across platforms popular in East Africa.',
     icon: <Users size={48} className="text-marketing-accent" />,
   },
   {
     title: 'Content Marketing',
-    description: 'Compelling content strategies that educate, engage, and convert your target audience.',
+    description: 'Compelling content strategies that tell authentic African stories. We create educational and engaging content in English and Swahili that converts your target audience while celebrating local culture.',
     icon: <Megaphone size={48} className="text-marketing-accent" />,
   },
 ];

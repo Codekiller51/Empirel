@@ -54,19 +54,19 @@ const TechStack = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-primary-dark mb-4">Why Our Tech Stack Matters</h3>
-            <p className="text-neutral-700 mb-4">
-              We carefully select the best technologies for each project to ensure optimal performance, scalability, and long-term maintainability. Our expertise spans across multiple platforms and frameworks, allowing us to build solutions that precisely match your business requirements.
+            <p className="text-neutral-700 dark:text-neutral-300 mb-4">
+              We carefully select technologies that work reliably in East African environments. Our stack is chosen for optimal performance with varying internet speeds, compatibility with local systems, and long-term maintainability by regional development teams.
             </p>
-            <p className="text-neutral-700 mb-4">
-              Our development team stays at the forefront of technological advancements, continuously incorporating new tools and methodologies to improve our delivery capabilities.
+            <p className="text-neutral-700 dark:text-neutral-300 mb-4">
+              Our development team combines international best practices with local market knowledge. We stay current with global tech trends while understanding the unique requirements of Tanzanian and East African businesses.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="flex flex-col">
-                <span className="text-3xl font-bold text-mtech-accent">50+</span>
+                <span className="text-3xl font-bold text-mtech-accent">75+</span>
                 <span className="text-neutral-600">Tech Certifications</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-bold text-mtech-accent">12+</span>
+                <span className="text-3xl font-bold text-mtech-accent">5+</span>
                 <span className="text-neutral-600">Years Experience</span>
               </div>
             </div>

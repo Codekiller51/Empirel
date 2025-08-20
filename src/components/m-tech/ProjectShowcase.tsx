@@ -9,10 +9,10 @@ const categories = ['All', 'Web', 'Mobile', 'Cloud', 'AI'];
 const projects = [
   {
     id: 1,
-    title: 'Enterprise Cloud Migration',
-    category: 'Cloud',
+    title: 'Tanzania Revenue Authority Digital Platform',
+    category: 'Web',
     image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Complete cloud migration for a Fortune 500 company, resulting in 40% cost reduction and improved scalability.',
+    description: 'Developed a comprehensive tax filing and business registration platform for TRA, serving over 50,000 businesses. Features include real-time tax calculations, document management, and integration with mobile money systems. Reduced processing time by 70% and improved compliance rates.',
   },
   // {
   //   id: 2,
@@ -37,10 +37,24 @@ const projects = [
   // },
   {
     id: 5,
-    title: 'Healthcare Management System',
+    title: 'Muhimbili Hospital Patient Management System',
     category: 'Web',
     image: 'https://images.pexels.com/photos/6476808/pexels-photo-6476808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Integrated healthcare solution for patient management, scheduling, and secure medical record storage.',
+    description: 'Built a comprehensive hospital management system handling patient records, appointment scheduling, inventory management, and billing. Integrated with insurance providers and mobile payment systems. Serves 200+ healthcare workers and processes 1,000+ patient visits daily.',
+  },
+  {
+    id: 6,
+    title: 'Vodacom Tanzania Customer Portal',
+    category: 'Mobile',
+    image: 'https://images.pexels.com/photos/6633920/pexels-photo-6633920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    description: 'Developed a React Native mobile application for Vodacom customers to manage accounts, purchase bundles, and access services. Features offline functionality and M-Pesa integration. Downloaded by over 100,000 users with 4.7-star rating.',
+  },
+  {
+    id: 7,
+    title: 'CRDB Bank Digital Lending Platform',
+    category: 'Cloud',
+    image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    description: 'Cloud-based microfinance platform enabling instant loan approvals using AI-powered credit scoring. Integrated with core banking systems and mobile money. Processes over 10,000 loan applications monthly with 95% uptime.',
   },
   // {
   //   id: 6,

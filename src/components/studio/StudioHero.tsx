@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { PaintBucket, Camera, Film, Image } from 'lucide-react';
+import { PaintBucket, Camera, Film, Image, Users, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
 
 const StudioHero = () => {
+  const { t } = useTranslation();
+  
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-800 overflow-hidden">
+    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-800 dark:from-black dark:via-neutral-900 dark:to-purple-900 overflow-hidden">
       {/* Animated creative elements */}
       <div className="absolute inset-0 opacity-20">
         {[...Array(12)].map((_, i) => (
@@ -69,25 +72,43 @@ const StudioHero = () => {
               transition={{ delay: 0.3 }}
             >
               <PaintBucket size={20} className="mr-2" />
-              <span className="font-semibold tracking-wide text-sm md:text-base">Creative Excellence</span>
+              <span className="font-semibold tracking-wide text-sm md:text-base">{t('studio.badge', 'Creative Excellence')}</span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 md:mb-8 leading-[1.1]">
-              Bring Ideas To
-              <span className="block text-purple-400 mt-2 md:mt-4 drop-shadow-sm">Life</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white dark:text-neutral-100 mb-6 md:mb-8 leading-[1.1]">
+              {t('studio.title')}
+              <span className="block text-purple-400 mt-2 md:mt-4 drop-shadow-sm">{t('studio.subtitle', 'Life')}</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-300 mb-8 md:mb-10 max-w-lg leading-relaxed">
-              Transform your vision into captivating visual experiences through innovative design, photography, and video production.
+            <p className="text-lg md:text-xl text-slate-300 dark:text-neutral-300 mb-8 md:mb-10 max-w-lg leading-relaxed">
+              {t('studio.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" colorScheme="studio" to="/contact">
-                Start Creating
+                {t('studio.startCreating')}
               </Button>
               <Button size="lg" variant="outline" colorScheme="studio" href="#projects" className="border-purple-400 text-purple-400 hover:bg-purple-400/10">
-                View Portfolio
+                {t('studio.viewPortfolio')}
               </Button>
+            </div>
+            
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 gap-6 mt-12 max-w-md">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Users className="text-purple-400 mr-2" size={20} />
+                  <span className="text-2xl font-bold text-white">200+</span>
+                </div>
+                <p className="text-sm text-slate-300">Creative Projects</p>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Award className="text-purple-400 mr-2" size={20} />
+                  <span className="text-2xl font-bold text-white">15+</span>
+                </div>
+                <p className="text-sm text-slate-300">Design Awards</p>
+              </div>
             </div>
           </motion.div>
 
@@ -102,34 +123,34 @@ const StudioHero = () => {
                 {
                   icon: <Camera size={32} />,
                   title: 'Photography',
-                  desc: 'Professional shoots',
+                  desc: 'Capturing Tanzania\'s beauty',
                 },
                 {
                   icon: <Film size={32} />,
                   title: 'Video Production',
-                  desc: 'Engaging content',
+                  desc: 'Tell your story',
                 },
                 {
                   icon: <PaintBucket size={32} />,
                   title: 'Design Services',
-                  desc: 'Creative solutions',
+                  desc: 'Unique brand identity',
                 },
                 {
                   icon: <Image size={32} />,
                   title: 'Visual Identity',
-                  desc: 'Brand aesthetics',
+                  desc: 'Stand out locally',
                 },
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 shadow-soft hover:shadow-hover hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 dark:bg-black/20 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 shadow-soft hover:shadow-hover hover:bg-white/20 dark:hover:bg-black/40 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
                 >
                   <div className="text-purple-400 mb-3 md:mb-4">{item.icon}</div>
-                  <h3 className="font-bold text-white mb-2 tracking-wide text-sm md:text-base">{item.title}</h3>
-                  <p className="text-xs md:text-sm text-slate-300">{item.desc}</p>
+                  <h3 className="font-bold text-white dark:text-neutral-100 mb-2 tracking-wide text-sm md:text-base">{item.title}</h3>
+                  <p className="text-xs md:text-sm text-slate-300 dark:text-neutral-400">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
